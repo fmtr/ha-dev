@@ -1,0 +1,35 @@
+name: Addon SSH Development Environment
+description: Addon SSH Development Environment
+slug: dev
+version: 0.0.0
+
+init: false
+
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+audio: true
+
+map:
+  - addons:rw
+  - share:rw
+
+services:
+  - mqtt:need
+
+host_network: true
+ingress: true
+
+options:
+  password: password
+  port: 2222
+  command: echo SETUP STEPS
+
+schema:
+  password: password
+  port: int
+  command: str
